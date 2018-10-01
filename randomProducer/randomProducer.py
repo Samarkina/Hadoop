@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 def time(year, month):
-    day = np.random.randint(1, 7)
+    day = np.random.randint(1, 7 + 1)
     while True:
         try:
             hour = abs(int(np.random.normal(12, 11)))
@@ -23,8 +23,8 @@ def randomIP():
 
 def randomRowDataFrame(dataset, year, month):
     randomNumber = np.random.randint(0, len(dataset))
-    productName = dataset["Product"][randomNumber]
-    productCategory = dataset["Product type"][randomNumber]
+    productName = dataset["name"][randomNumber]
+    productCategory = dataset["type"][randomNumber]
     productPrice = abs(round(np.random.normal(500, 300), 2))
     purchaseDate = time(year, month)
     clientIPAddress = randomIP()
@@ -35,11 +35,11 @@ def randomRowDataFrame(dataset, year, month):
     return dict1
 
 def dataForDataFrame(dataset, year, month):
-    for i in range(3000):
+    for i in range(70000):
         print(randomRowDataFrame(dataset, year, month))
 
 def main():
-    dataset = pd.read_csv('dataset.csv')
+    dataset = pd.read_csv("dataset.csv")
 
     year = np.random.randint(2010, 2017)
     month = np.random.randint(1, 12)
