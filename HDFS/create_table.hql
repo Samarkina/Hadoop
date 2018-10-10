@@ -11,13 +11,13 @@ FIELDS TERMINATED BY ','
 STORED AS SEQUENCEFILE
 LOCATION '/flume/events/';
 
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/01') location '/flume/events/2016/04/01';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/02') location '/flume/events/2016/04/02';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/03') location '/flume/events/2016/04/03';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/04') location '/flume/events/2016/04/04';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/05') location '/flume/events/2016/04/05';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/06') location '/flume/events/2016/04/06';
-ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2016/04/07') location '/flume/events/2016/04/07';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/01') location '/flume/events/2012/07/01';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/02') location '/flume/events/2012/07/02';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/03') location '/flume/events/2012/07/03';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/04') location '/flume/events/2012/07/04';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/05') location '/flume/events/2012/07/05';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/06') location '/flume/events/2012/07/06';
+ALTER TABLE Purchases ADD PARTITION (purchaseDate = '2012/07/07') location '/flume/events/2012/07/07';
 
 select *
 from Purchases;

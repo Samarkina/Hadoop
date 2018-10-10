@@ -1,6 +1,11 @@
 .idea/
 __pycache__/
+metastore_db/
+derby.log
+Spark/.DS_Store
+.DS_Store
 
 *.csv
 !dataset.csv
+!GeoData.csv
 

@@ -16,7 +16,7 @@ def time(year, month):
     return str(date)
 
 def octet():
-    return str(np.random.randint(1, 232))
+    return str(np.random.randint(1, 223))
 
 def randomIP():
     return octet() + '.' + octet() + '.' + octet() + '.' + octet()
@@ -35,14 +35,16 @@ def randomRowDataFrame(dataset, year, month):
     return dict1
 
 def dataForDataFrame(dataset, year, month):
-    for i in range(70000):
+    for i in range(100000):
         print(randomRowDataFrame(dataset, year, month))
 
 def main():
     dataset = pd.read_csv("dataset.csv")
 
-    year = np.random.randint(2010, 2017)
-    month = np.random.randint(1, 12)
+    # year = np.random.randint(2010, 2017)
+    # month = np.random.randint(1, 12)
+    year = 2012
+    month = 7
 
     dataForDataFrame(dataset, year, month)
 
