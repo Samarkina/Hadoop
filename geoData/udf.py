@@ -17,7 +17,6 @@ def addressInNetwork(ipaddr, netmask):
 def convertList(geolite):
     for i in range(len(geolite)):
         netaddr, bits = geolite[i][0].split('/')
-        # netmask = struct.unpack('!I', socket.inet_aton(netaddr))[0] & ((2 << int(bits) - 1) - 1)
         netmask = struct.unpack('!I', socket.inet_aton(netaddr))[0] & ((0xffffffff << (32 - int(bits))) & 0xffffffff)
         geolite[i].append(geolite[i][0])
         geolite[i][0] = netmask
